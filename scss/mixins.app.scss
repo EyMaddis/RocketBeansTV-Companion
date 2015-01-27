@@ -1,0 +1,5 @@
+// source: http://stackoverflow.com/questions/10826064/calc-element-in-sass-css
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}

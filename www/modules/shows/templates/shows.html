@@ -1,0 +1,24 @@
+<ion-view view-title="Show-Übersicht" class="shows">
+  <ion-content class="content-padding">
+
+    <div class="responsive-sm column-wall ">
+      <div class="list card show" ng-repeat="show in shows" ng-click="showDetail(show)">
+
+        <div class="item item-image">
+          <img ng-src="{{imageBaseURL}}{{show.logo}}">
+        </div>
+
+        <div class="item">
+          <h2>{{show.title}}</h2>
+          <p>{{show.description}}</p>
+          <p class="schedule-info" ng-show="show.schedule">{{show.schedule}}</p>
+          <a class="item item-icon-left assertive">
+            <i class="icon ion-forward"></i>
+            Mehr Infos
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

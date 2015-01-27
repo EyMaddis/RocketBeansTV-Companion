@@ -1,0 +1,133 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// handy:
+//@media screen and (orientation:portrait) { … }
+//@media screen and (orientation:landscape) { … }
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+@import "mixins.app";
+
+.twitch-wrapper {
+
+  div.scroll {
+    height: 100%;
+  }
+
+  .player {
+    height: 100%;
+
+    iframe {
+      width:100%;
+      height: 100%;
+    }
+  }
+  .chat iframe{
+    width: 100%;
+    @include calc("height", "100% - 49px");
+  }
+}
+
+.schedule {
+  .now-live {
+    background-color: #E5E0FF;
+  }
+}
+
+.shows {
+  .show {
+    cursor: pointer;
+    max-width: 256px;
+    img {
+      max-width: 100%;
+      width: 256px;
+    }
+    margin: 15px auto;
+    float: left;
+
+  }
+  p.schedule-info {
+    font-size: 0.8em;
+    color: #999;
+  }
+}
+
+.show-detail {
+  .container {
+    max-width: $grid-responsive-lg-break;
+    margin: auto;
+    margin-top: 15px;
+  }
+  .head-wrapper {
+    @media (max-width: $grid-responsive-md-break) {
+      text-align: center;
+    }
+  }
+  .banner-col{
+
+    @media (min-width: $grid-responsive-md-break) {
+      min-width: 256px;
+      min-height: 128px;
+    }
+    .banner {
+      margin: auto;
+      border-radius: 5px;
+      z-index: 3;
+      @media (min-width: $grid-responsive-md-break) {
+        position: absolute;
+      }
+    }
+  }
+  .header {
+//    text-align: center;
+    border: none;
+  }
+
+  .light {
+    p, h1 {
+      color: white !important;
+    }
+  }
+  .dark {
+    p, h1 {
+      color: black !important;
+    }
+  }
+}
+
+
+.menu-button {
+  @media (min-width: $grid-responsive-lg-break){
+    display: none;
+  }
+}
+
+.content-padding {
+  padding: 15px;
+}
+
+//http://demosthenes.info/blog/844/Easy-Masonry-Layout-With-Flexbox
+.column-wall {
+  @include display-flex();
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  margin: auto;
+}

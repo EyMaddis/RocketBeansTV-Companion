@@ -1,0 +1,50 @@
+<ion-view view-title="{{show.title}}" class="show-detail">
+  <ion-content style="background: {{show.background}}">
+    <div class="container">
+      <div class="row responsive-md head-wrapper">
+        <div class="col banner-col col-offset-10 col-33">
+          <img ng-src="{{imageBaseURL}}{{show.logo}}" class="banner">
+        </div>
+        <div class="col col-center">
+          <div class="header {{headerColor}}">
+            <h1>{{show.title}} <i ng-show="show.live" style="margin-left: 10px;" title="Live!" class="icon ion-radio-waves"></i></h1>
+            <p>{{show.schedule}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="list card">
+
+        <div class="item">
+          <div class="row responsive-md">
+            <div class="col banner-col col-offset-10 col-33"></div>
+            <div class="col">
+              <p class="description">
+                {{show.description}}
+              </p>
+            </div>
+          </div>
+          <p>
+            <a href="#" class="subdued">1 Like</a>
+            <a href="#" class="subdued">5 Comments</a>
+          </p>
+        </div>
+
+        <div class="item tabs tabs-secondary tabs-icon-left">
+          <a class="tab-item" href="#">
+            <i class="icon ion-thumbsup"></i>
+            Like
+          </a>
+          <a class="tab-item" href="#">
+            <i class="icon ion-chatbox"></i>
+            Comment
+          </a>
+          <a class="tab-item" href="#">
+            <i class="icon ion-share"></i>
+            Share
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

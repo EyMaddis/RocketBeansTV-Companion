@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>RocketBeansTV Companion App</title>
+
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="lib/lodash/dist/lodash.min.js"></script>
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/restangular/dist/restangular.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="lib/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="lib/tinycolor/tinycolor.js"></script>
+
+    <!-- use concat for deployment -->
+    <!-- load main module -->
+    <script src="modules/main/module.js"></script>
+    <script src="modules/main/controllers/main.js"></script>
+
+    <!-- load home module -->
+    <script src="modules/home/module.js"></script>
+    <script src="modules/home/controllers/home.js"></script>
+
+    <!-- load schedule module -->
+    <script src="modules/schedule/module.js"></script>
+    <script src="modules/schedule/controllers/schedule.js"></script>
+
+    <!-- load shows module -->
+    <script src="modules/shows/module.js"></script>
+    <script src="modules/shows/controllers/shows.js"></script>
+    <script src="modules/shows/controllers/show-detail.js"></script>
+
+    <!-- load stream module -->
+    <script src="modules/stream/module.js"></script>
+    <script src="modules/stream/controllers/stream.js"></script>
+
+    <!-- load app -->
+    <script src="modules/app.js"></script>
+  </head>
+
+  <body ng-app="rbtv">
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>
