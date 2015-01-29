@@ -1,4 +1,4 @@
-angular.module('rbtv.shows', ['restangular','ui.router']).config(['$stateProvider', '$provide', function($stateProvider, $provide){
+angular.module('rbtv.shows', ['restangular','ui.router', 'nl2br', 'ionic']).config(['$stateProvider', '$provide', function($stateProvider, $provide){
     $stateProvider
         .state('rbtv.shows', {
             url: "/shows",
@@ -10,7 +10,7 @@ angular.module('rbtv.shows', ['restangular','ui.router']).config(['$stateProvide
             }
         })
         .state('rbtv.show', {
-            url: "show/:show",
+            url: "/show/:show",
             views: {
                 'menuContent': {
                     templateUrl: 'modules/shows/templates/show-detail.html',

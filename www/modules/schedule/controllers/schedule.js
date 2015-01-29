@@ -1,5 +1,5 @@
 angular.module('rbtv.schedule')
-    .controller('ScheduleController', ['$scope', 'Restangular', function($scope, restangular) {
+    .controller('ScheduleController', ['$scope', 'Restangular', '$state', function($scope, restangular, $state) {
         restangular.all('schedule').getList().then(function(rawSchedule){
 
             var schedule = {};
@@ -42,6 +42,10 @@ angular.module('rbtv.schedule')
             $scope.schedule = schedule;
         });
 
+        $scope.showDetail = function(item){
+            if(!item || !item.showUrl) return;
+            $state.go('rbtv.show', { show: item.showUrl });
+        }
         //TODO empty and late response
 
     }]

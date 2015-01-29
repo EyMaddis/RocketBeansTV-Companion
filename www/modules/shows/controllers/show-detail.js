@@ -1,14 +1,12 @@
 angular.module('rbtv.shows')
-    .controller('ShowDetailController', ['$scope', 'shows', '$stateParams', function($scope, shows, $stateParams) {
+    .controller('ShowDetailController', ['$scope', 'shows', '$stateParams', '$ionicHistory', function($scope, shows, $stateParams, $ionicHistory) {
         shows.getByURL($stateParams.show).then(function(show){
             $scope.show =  show;
             var background = tinycolor(show.background);
-
-            console.log('colors: ', background.isDark())
-
             $scope.headerColor = background.isDark()? 'light' : 'dark';
-
-
-            //$scope.headerColor = comp.toHexString();
+            $scope.show.description.replace('(?:\n|\r\n)', '<br />');
+        }).catch(function(err){
+            console.log('could not load shows', err);
         });
+        console.log($ionicHistory.currentStateName());
     }]);

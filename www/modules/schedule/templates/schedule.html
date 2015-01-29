@@ -1,21 +1,37 @@
 <ion-view view-title="Sendeplan" class="schedule">
   <ion-content>
+      <div class="container">
+        <div ng-repeat="(day, list) in schedule">
+          <div class="item item-divider">
+            {{day}}
+          </div>
+          <ion-list>
+            <ion-item ng-repeat="item in list" ng-click="showDetail(item)" class="item item-icon-right {{item.class}}" >
 
-      <div ng-repeat="(day, list) in schedule">
-        <div class="item item-divider">
-          {{day}}
+              <div class="row">
+                <div class="col col-center logo-col" style="background-image: url({{imageBaseURL}}{{item.showImage}})">
+
+                </div>
+                <div class="col info-col">
+                  <p class="show">
+                    {{item.show}}
+                  </p>
+                  <p class="time">
+                    {{item.start | date:"H:mm"}} Uhr
+                  </p>
+                </div>
+                <div class="col icon-col" ng-show="item.icon">
+                  <i class="icon {{item.icon}} item-note"></i>
+                </div>
+                <!--<span class="item-note">-->
+                <!--</span>-->
+              </div>
+
+            </ion-item>
+          </ion-list>
+
         </div>
-        <ion-list>
-          <ion-item ng-repeat="item in list" href="#/app/show/{{item.show}}" class="item item-icon-left item-icon-right {{item.class}}" >
-
-            <i class="icon {{item.icon}}"></i>
-            {{item.show}}
-            <span class="item-note">
-              {{item.start | date:"H:mm"}} Uhr
-            </span>
-          </ion-item>
-        </ion-list>
-
       </div>
+
   </ion-content>
 </ion-view>

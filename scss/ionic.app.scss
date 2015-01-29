@@ -47,8 +47,45 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 .schedule {
+  background-color: #eeeeee;
+
+  .container {
+    margin: auto;
+    max-width: $grid-responsive-md-break;
+  }
   .now-live {
     background-color: #E5E0FF;
+  }
+  .show-logo {
+    max-width: 70px;
+    max-height: 70px;
+    border-radius: 3px;
+    margin: 3px;
+  }
+  .logo-col {
+    background-position: 50% 50%;
+    height: 70px;
+    max-width: 70px;
+    border-radius: 3px;
+    background-size: cover;
+  }
+  .icon-col {
+    max-width: 40px;
+  }
+  .info-col {
+    padding-left: 20px;
+
+    p {
+      font-size: $font-size-large;
+    }
+    .time {
+      color: #999999;
+      margin-top: 10px;
+    }
+    .show {
+      font-size: 1.2em;
+      white-space: normal;
+    }
   }
 }
 
@@ -87,14 +124,20 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
       min-width: 256px;
       min-height: 128px;
     }
-    .banner {
+    img.banner {
       margin: auto;
       border-radius: 5px;
       z-index: 3;
+      width: 256px;
+      max-height: 256px;
+
       @media (min-width: $grid-responsive-md-break) {
         position: absolute;
       }
     }
+  }
+  .description {
+    white-space: normal;
   }
   .header {
 //    text-align: center;

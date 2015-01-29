@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('rbtv', ['ionic', 'rbtv.main', 'rbtv.home', 'rbtv.schedule', 'rbtv.stream', 'rbtv.shows', 'restangular'])
 
-.run(['$ionicPlatform', '$rootScope', function($ionicPlatform, $rootScope) {
+.run(['$ionicPlatform', '$rootScope', '$ionicHistory', function($ionicPlatform, $rootScope, $ionicHistory) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -36,7 +36,7 @@ angular.module('rbtv', ['ionic', 'rbtv.main', 'rbtv.home', 'rbtv.schedule', 'rbt
 }])
 
 .config(['RestangularProvider', function(Restangular){
-      Restangular.setBaseUrl("http://192.168.178.25:3001"); //TODO configurable for production
+      Restangular.setBaseUrl("http://192.168.178.25:3001/api/"); //TODO configurable for production
       Restangular.setDefaultHttpFields({
         timeout: 5000,
         cache: true
