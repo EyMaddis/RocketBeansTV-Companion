@@ -7015,6 +7015,9 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.main.view-container ion-content {
+  background-color: #EEE; }
+
 .twitch-wrapper div.scroll {
   height: 100%; }
 .twitch-wrapper .player {
@@ -7027,36 +7030,34 @@ a.button {
   height: -webkit-calc(100% - 49px);
   height: calc(100% - 49px); }
 
-.schedule {
-  background-color: #eeeeee; }
-  .schedule .container {
-    margin: auto;
-    max-width: 767px; }
-  .schedule .now-live {
-    background-color: #E5E0FF; }
-  .schedule .show-logo {
-    max-width: 70px;
-    max-height: 70px;
-    border-radius: 3px;
-    margin: 3px; }
-  .schedule .logo-col {
-    background-position: 50% 50%;
-    height: 70px;
-    max-width: 70px;
-    border-radius: 3px;
-    background-size: cover; }
-  .schedule .icon-col {
-    max-width: 40px; }
-  .schedule .info-col {
-    padding-left: 20px; }
-    .schedule .info-col p {
-      font-size: 18px; }
-    .schedule .info-col .time {
-      color: #999999;
-      margin-top: 10px; }
-    .schedule .info-col .show {
-      font-size: 1.2em;
-      white-space: normal; }
+.schedule .container {
+  margin: auto;
+  max-width: 767px; }
+.schedule .now-live {
+  background-color: #E5E0FF; }
+.schedule .show-logo {
+  max-width: 70px;
+  max-height: 70px;
+  border-radius: 3px;
+  margin: 3px; }
+.schedule .logo-col {
+  background-position: 50% 50%;
+  height: 70px;
+  max-width: 70px;
+  border-radius: 3px;
+  background-size: cover; }
+.schedule .icon-col {
+  max-width: 40px; }
+.schedule .info-col {
+  padding-left: 20px; }
+  .schedule .info-col p {
+    font-size: 18px; }
+  .schedule .info-col .time {
+    color: #999999;
+    margin-top: 10px; }
+  .schedule .info-col .show {
+    font-size: 1.2em;
+    white-space: normal; }
 
 .shows .show {
   cursor: pointer;

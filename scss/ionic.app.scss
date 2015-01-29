@@ -26,6 +26,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
 @import "mixins.app";
 
+.main.view-container ion-content {
+  background-color: #EEE;
+}
+
 .twitch-wrapper {
 
   div.scroll {
@@ -47,7 +51,6 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 .schedule {
-  background-color: #eeeeee;
 
   .container {
     margin: auto;
@@ -88,7 +91,6 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     }
   }
 }
-
 .shows {
   .show {
     cursor: pointer;
