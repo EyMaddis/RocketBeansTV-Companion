@@ -1,4 +1,4 @@
-angular.module('rbtv.shows', ['restangular','ui.router', 'nl2br', 'ionic']).config(['$stateProvider', '$provide', function($stateProvider, $provide){
+angular.module('rbtv.shows', ['restangular','ui.router', 'ionic']).config(['$stateProvider', '$provide', function($stateProvider, $provide){
     $stateProvider
         .state('rbtv.shows', {
             url: "/shows",
@@ -26,7 +26,7 @@ angular.module('rbtv.shows', ['restangular','ui.router', 'nl2br', 'ionic']).conf
         var waiting = [];
         restangular.all('shows').getList().then(function(shows){
             cache = shows;
-            console.log('show cache renewed.', cache, waiting);
+            console.log('show cache renewed.');
             waiting.forEach(function(item){item(shows)});
         });
 
