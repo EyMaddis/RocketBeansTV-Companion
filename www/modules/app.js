@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('rbtv', ['ionic', 'rbtv.main', 'rbtv.home', 'rbtv.schedule', 'rbtv.stream', 'rbtv.shows', 'restangular', 'rbtv.notification'])
+angular.module('rbtv', ['ionic', 'rbtv.main', 'rbtv.home', 'rbtv.schedule', 'rbtv.stream', 'rbtv.shows', 'rbtv.redditbeans', 'restangular', 'rbtv.notification'])
 
 .run(['$ionicPlatform', '$rootScope', '$ionicHistory', function($ionicPlatform, $rootScope, $ionicHistory) {
   $ionicPlatform.ready(function() {

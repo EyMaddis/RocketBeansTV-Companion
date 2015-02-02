@@ -7100,6 +7100,22 @@ a.button {
 .show-detail .dark p, .show-detail .dark h1 {
   color: black !important; }
 
+.redditbeans .post.item-icon-right {
+  padding-right: 64px; }
+.redditbeans .post .info {
+  color: #999; }
+.redditbeans .post .link a {
+  color: black;
+  text-decoration: none !important;
+  font-size: 1.2em;
+  white-space: normal; }
+.redditbeans .post .link .stickied {
+  margin-right: 5px;
+  color: red; }
+.redditbeans .post .score {
+  color: #ccc;
+  z-index: 0; }
+
 @media (min-width: 1023px) {
   .menu-button {
     display: none; } }

@@ -1,0 +1,28 @@
+<ion-view view-title="RocketbeansTV Companion" class="redditbeans">
+  <ion-content class="content-padding">
+    <h1>/r/rocketbeans</h1>
+
+    <div class="card">
+      <ion-item ng-repeat="post in posts.children" class="post item item-icon-right" ng-click="postDetail(post.data.id)">
+        <div>
+
+          <p class="link">
+            <i class="ion-pin stickied" ng-show="post.data.stickied"> </i> <a ng-href="{{post.data.url}}" target="_blank">{{post.data.title}}</a>
+          </p>
+          <p class="info">
+             {{post.data.created*1000 | date: 'dd.MM. HH:mm'}} -
+            {{post.data.num_comments}}
+            <span ng-switch="{{post.data.num_comments}}">
+              <span ng-switch-when="1">Kommentar</span>
+              <span ng-switch-default>Kommentare</span>
+            </span>
+            - {{post.data.author}}
+          </p>
+        </div>
+        <div class="icon score">
+          {{post.data.score}}
+        </div>
+      </ion-item>
+    </div>
+  </ion-content>
+</ion-view>

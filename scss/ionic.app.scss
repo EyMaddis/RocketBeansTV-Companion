@@ -158,6 +158,35 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   }
 }
 
+.redditbeans {
+  .post {
+    &.item-icon-right {
+      padding-right: 64px;
+    }
+    .info{
+       color: #999;
+     }
+    .link {
+      a {
+        color: black;
+        text-decoration: none !important;
+        font-size: 1.2em;
+        white-space: normal;
+      }
+      .stickied {
+        margin-right: 5px;
+        color: red;
+      }
+    }
+
+    .score {
+      color: #ccc;
+      z-index: 0;
+    }
+  }
+
+}
+
 
 .menu-button {
   @media (min-width: $grid-responsive-lg-break){

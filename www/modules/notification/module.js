@@ -82,7 +82,7 @@ angular.module('rbtv.notification', ['ionic'])
                         'Content-Type': 'application/json'
                     },
                     data: {
-                        user: 'user1',
+                        user: regid,
                         type: 'android',
                         token: regid
                     }
