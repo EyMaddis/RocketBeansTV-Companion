@@ -1,6 +1,45 @@
 <ion-view view-title="RocketbeansTV Companion" class="redditbeans-post">
   <ion-content class="content-padding">
-    <h1>{{post.data.title}}</h1>
+
+      <div class="list card">
+
+          <div class="item item-avatar">
+              <img src="mcfly.jpg">
+              <h2><a ng-href="{{post.url}}">{{post.title}}</a></h2>
+                <p class="info">
+                    {{post.created*1000 | date: 'dd.MM. HH:mm'}} -
+                    {{post.num_comments}}
+                        <span ng-switch="{{post.num_comments}}">
+                            <span ng-switch-when="1">Kommentar</span>
+                            <span ng-switch-default>Kommentare</span>
+                        </span>
+                    - {{post.author}}
+                </p>
+          </div>
+
+          <div class="item item-body">
+              <p ng-show="post.is_self" btf-markdown="post.selftext">
+              </p>
+          </div>
+
+          <div class="item tabs tabs-secondary tabs-icon-left">
+              <a class="tab-item" href="#">
+                  <i class="icon ion-thumbsup"></i>
+                  Like
+              </a>
+              <a class="tab-item" href="#">
+                  <i class="icon ion-chatbox"></i>
+                  Comment
+              </a>
+              <a class="tab-item" href="#">
+                  <i class="icon ion-share"></i>
+                  Share
+              </a>
+          </div>
+
+      </div>
+
+
 
     <div class="card">
       Hallo!

@@ -9,6 +9,6 @@ angular.module('rbtv.redditbeans').controller('RedditBeansController', ['$http',
         });
     $scope.postDetail = function(postId){
         console.log('go to post', postId);
-        $state.go('rbtv.redditbeans.show', {post: postId});
+        $state.go('rbtv.redditpost', {post: postId});
     }
 }]);

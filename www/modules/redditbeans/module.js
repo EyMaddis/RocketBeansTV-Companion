@@ -1,4 +1,4 @@
-angular.module('rbtv.redditbeans',[]).config(['$stateProvider', function($stateProvider){
+angular.module('rbtv.redditbeans',['btford.markdown']).config(['$stateProvider', function($stateProvider){
     $stateProvider
         .state('rbtv.redditbeans', {
             url: "/redditbeans",
@@ -8,7 +8,7 @@ angular.module('rbtv.redditbeans',[]).config(['$stateProvider', function($stateP
                     controller: 'RedditBeansController'
                 }
             }
-        }).state('rbtv.redditbeans.show', {
+        }).state('rbtv.redditpost', {
             url: "/redditbeans/:post",
             views: {
                 'menuContent': {
