@@ -1,5 +1,25 @@
-<ion-view view-title="RocketbeansTV Companion">
+<ion-view view-title="RocketBuddy">
   <ion-content class="content-padding">
-    <h1>Willkommen</h1>
+      <div class="row responsive-md">
+          <div class="col card">
+                  <div class="item item-avatar">
+                      <h2>Gerade im Stream</h2>
+                      <p>Spiel: '{{twitchStream.game}}' mit <strong>{{twitchStream.viewers}}</strong> Zuschauern!</p>
+                  </div>
+
+                  <div class="item item-image">
+                      <img ng-src="{{twitchStream.preview.large}}" style="max-width: 640px;">
+                  </div>
+
+                  <a class="item item-icon-left assertive" ng-click="watchNow()">
+                      <i class="icon ion-social-twitch-outline"></i>
+                      Jetzt gucken
+                  </a>
+          </div>
+          <!--<div class="col">-->
+              <!---->
+          <!--</div>-->
+
+      </div>
   </ion-content>
 </ion-view>

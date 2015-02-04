@@ -16,7 +16,7 @@ angular.module('rbtv.schedule')
                 if(relativeDay < 0) {
                     list = "Gestern";
                 } else if(relativeDay > 0) {
-                    list = "Morgen"
+                    list = "Morgen";
                     if(relativeDay > 1) return; //TODO
                 }
 
