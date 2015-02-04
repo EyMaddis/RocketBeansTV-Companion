@@ -1,2 +1,3 @@
-angular.module('rbtv.home').controller('HomeController', function($scope, $stateParams) {
-});
+angular.module('rbtv.home').controller('HomeController', ['$scope', '$stateParams', function($scope, $stateParams) {
+
+}]);

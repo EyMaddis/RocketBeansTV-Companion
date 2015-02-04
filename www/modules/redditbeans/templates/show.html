@@ -2,47 +2,57 @@
   <ion-content class="content-padding">
 
       <div class="list card">
+          <div ng-hide="post" class="item">
+              Lade Inhalte...
+          </div>
 
-          <div class="item item-avatar">
-              <img src="mcfly.jpg">
-              <h2><a ng-href="{{post.url}}">{{post.title}}</a></h2>
-                <p class="info">
-                    {{post.created*1000 | date: 'dd.MM. HH:mm'}} -
-                    {{post.num_comments}}
-                        <span ng-switch="{{post.num_comments}}">
-                            <span ng-switch-when="1">Kommentar</span>
-                            <span ng-switch-default>Kommentare</span>
-                        </span>
-                    - {{post.author}}
-                </p>
+          <div class="item item-avatar row" ng-show="post">
+              <div class="icon score col">
+                  {{post.score}}
+              </div>
+              <div class="col">
+                  <h2><a ng-href="{{post.url}}" target="_blank">{{post.title}}</a></h2>
+                    <p class="info">
+                        {{post.created*1000 | date: 'dd.MM. HH:mm'}} -
+                        {{post.num_comments}}
+                            <span ng-switch="{{post.num_comments}}">
+                                <span ng-switch-when="1">Kommentar</span>
+                                <span ng-switch-default>Kommentare</span>
+                            </span>
+                        - {{post.author}}
+                    </p>
+              </div>
           </div>
 
           <div class="item item-body">
-              <p ng-show="post.is_self" btf-markdown="post.selftext">
+              <p ng-show="post.is_self" btf-markdown="post.selftext"></p>
+              <p ng-hide="post.is_self" class="embed">
+                  <img ng-src="{{post.url}}" ng-show="isImage" />
+              </p>
+              <p ng-show="youtubeURL" class="embed">
+                  <iframe width="420" height="315" ng-src="{{youtubeURL}}" frameborder="0" allowfullscreen></iframe>
               </p>
           </div>
-
-          <div class="item tabs tabs-secondary tabs-icon-left">
-              <a class="tab-item" href="#">
-                  <i class="icon ion-thumbsup"></i>
-                  Like
-              </a>
-              <a class="tab-item" href="#">
-                  <i class="icon ion-chatbox"></i>
-                  Comment
-              </a>
-              <a class="tab-item" href="#">
-                  <i class="icon ion-share"></i>
-                  Share
-              </a>
-          </div>
-
       </div>
 
 
+      <script type="text/ng-template"  id="comment_renderer.html">
+          <p class="info">
+              {{comment.data.score}} Punkt -
+              {{comment.data.author}} -
+              {{comment.data.created*1000 | date: 'dd.MM. HH:mm'}}
+          </p>
+          <p class="text" btf-markdown="comment.data.body">
+          </p>
 
-    <div class="card">
-      Hallo!
-    </div>
+          <ion-list class="comments card" ng-show="comment.data.replies.data.children.length">
+              <ion-item class="comment" ng-repeat="comment in comment.data.replies.data.children" ng-include="'comment_renderer.html'">
+              </ion-item>
+          </ion-list>
+      </script>
+      <ion-list class="comments">
+          <ion-item class="comment" ng-repeat="comment in comments" ng-include="'comment_renderer.html'">
+          </ion-item>
+      </ion-list>
   </ion-content>
 </ion-view>

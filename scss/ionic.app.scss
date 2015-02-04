@@ -184,7 +184,33 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
       z-index: 0;
     }
   }
+}
+.redditbeans-post {
+  .score {
+    float: left;
+    font-size: 3em;
+    color: #ccc;
+    max-width: 84px;
+    padding-top: 20px;
+  }
+  .embed {
+    text-align: center;
+  }
 
+  .comments{
+    .info {
+//      border-top: solid 1px #cccccc;
+      color: #999;
+      font-weight: bold;
+    }
+    .comment {
+      border: solid 1px #cccccc;
+      border-radius: 5px;
+      white-space: normal;
+      margin-bottom: 5px;
+    }
+
+  }
 }
 
 

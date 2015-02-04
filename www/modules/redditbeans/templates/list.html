@@ -5,9 +5,9 @@
     <div class="card">
       <ion-item ng-repeat="post in posts.children" class="post item item-icon-right" ng-click="postDetail(post.data.id)">
         <div>
-
           <p class="link">
-            <i class="ion-pin stickied" ng-show="post.data.stickied"> </i> <a ng-href="{{post.data.url}}" target="_blank">{{post.data.title}}</a>
+            <i class="ion-pin stickied" ng-show="post.data.stickied"> </i>
+              {{post.data.title}}
           </p>
           <p class="info">
              {{post.data.created*1000 | date: 'dd.MM. HH:mm'}} -

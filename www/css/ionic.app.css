@@ -7116,6 +7116,23 @@ a.button {
   color: #ccc;
   z-index: 0; }
 
+.redditbeans-post .score {
+  float: left;
+  font-size: 3em;
+  color: #ccc;
+  max-width: 84px;
+  padding-top: 20px; }
+.redditbeans-post .embed {
+  text-align: center; }
+.redditbeans-post .comments .info {
+  color: #999;
+  font-weight: bold; }
+.redditbeans-post .comments .comment {
+  border: solid 1px #cccccc;
+  border-radius: 5px;
+  white-space: normal;
+  margin-bottom: 5px; }
+
 @media (min-width: 1023px) {
   .menu-button {
     display: none; } }
