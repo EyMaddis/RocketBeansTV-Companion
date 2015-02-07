@@ -1,5 +1,10 @@
 <ion-view view-title="RocketbeansTV Companion" class="redditbeans">
   <ion-content class="content-padding">
+
+      <ion-refresher
+              pulling-text="Herunterziehen zum Aktualisieren"
+              on-refresh="doRefresh()">
+      </ion-refresher>
     <h1>/r/rocketbeans</h1>
 
     <div class="card">

@@ -7133,6 +7133,15 @@ a.button {
   border-radius: 5px;
   white-space: normal;
   margin-bottom: 5px; }
+  .redditbeans-post .comments .comment p {
+    white-space: normal; }
+
+.disqus .info {
+  white-space: normal !important;
+  font-size: 0.8em;
+  color: #999; }
+.disqus .attention {
+  font-size: 2em; }
 
 @media (min-width: 1023px) {
   .menu-button {

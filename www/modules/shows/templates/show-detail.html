@@ -23,28 +23,50 @@
               </p>
             </div>
           </div>
-          <p>
-            <a href="#" class="subdued">1 Like</a>
-            <a href="#" class="subdued">5 Comments</a>
-          </p>
+          <!--<p>-->
+            <!--<a href="#" class="subdued">1 Like</a>-->
+            <!--<a href="#" class="subdued">5 Comments</a>-->
+          <!--</p>-->
         </div>
 
-        <div class="item tabs tabs-secondary tabs-icon-left">
-          <a class="tab-item" href="#">
-            <i class="icon ion-thumbsup"></i>
-            Like
-          </a>
-          <a class="tab-item" href="#">
-            <i class="icon ion-chatbox"></i>
-            Comment
-          </a>
-          <a class="tab-item" href="#">
-            <i class="icon ion-share"></i>
-            Share
-          </a>
-        </div>
+        <!--<div class="item tabs tabs-secondary tabs-icon-left">-->
+          <!--<a class="tab-item" href="#">-->
+            <!--<i class="icon ion-thumbsup"></i>-->
+            <!--Like-->
+          <!--</a>-->
+          <!--<a class="tab-item" href="#">-->
+            <!--<i class="icon ion-chatbox"></i>-->
+            <!--Comment-->
+          <!--</a>-->
+          <!--<a class="tab-item" href="#">-->
+            <!--<i class="icon ion-share"></i>-->
+            <!--Share-->
+          <!--</a>-->
+        <!--</div>-->
+          <!---->
+
+          <div class="disqus item" style="white-space: normal">
+                <div class="row">
+                    <div class="col col-10">
+                        <i class="icon ion-information-circled attention"></i>
+                    </div>
+                    <div class="col info">
+                        <p>
+
+                            Leider gibt es Probleme mit dem Scrollen auf Mobilgeräten über der Kommentar-Sektion, deshalb bitte am Rand ansetzen für die Scroll-Geste.
+                        </p>
+                        <p>Wir arbeiten an einem Fix.</p>
+                    </div>
+                </div>
+                  <dir-disqus disqus-shortname="{{disqus_shortname}}"
+                              disqus-identifier="{{disqus_identifier}}"
+                              disqus-url="{{disqus_url}}"
+                              ready-to-bind="{{ loadDisqus }}">
+                  </dir-disqus>
+          </div>
 
       </div>
+
     </div>
   </ion-content>
 </ion-view>

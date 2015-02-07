@@ -210,8 +210,23 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
       border-radius: 5px;
       white-space: normal;
       margin-bottom: 5px;
+      p {
+        white-space: normal;
+      }
     }
 
+  }
+}
+
+.disqus {
+  .info {
+    white-space: normal!important;
+    font-size: 0.8em;
+    color: #999;
+  }
+
+  .attention {
+    font-size: 2em;
   }
 }
 

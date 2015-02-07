@@ -1,5 +1,11 @@
 <ion-view view-title="Sendeplan" class="schedule">
   <ion-content>
+
+      <ion-refresher
+              pulling-text="Herunterziehen zum Aktualisieren"
+              on-refresh="doRefresh()">
+      </ion-refresher>
+
       <div class="container">
         <div ng-repeat="(day, list) in schedule">
           <div class="item item-divider">

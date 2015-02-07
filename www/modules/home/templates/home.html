@@ -1,5 +1,10 @@
 <ion-view view-title="RocketBuddy">
+
   <ion-content class="content-padding">
+      <ion-refresher
+              pulling-text="Herunterziehen zum Aktualisieren"
+              on-refresh="doRefresh()">
+      </ion-refresher>
       <div class="row responsive-md">
           <div class="col card">
                   <div class="item item-avatar">
@@ -8,11 +13,11 @@
                   </div>
 
                   <div class="item item-image">
-                      <img img-cache ng-src="{{twitchStream.preview.large}}" style="max-width: 640px;">
+                      <img ng-src="{{twitchStream.preview.large}}" style="max-width: 640px;">
                   </div>
 
                   <a class="item item-icon-left assertive" ng-click="watchNow()">
-                      <i class="icon ion-social-twitch-outline"></i>
+                      <i class="icon ion-play"></i>
                       Jetzt gucken
                   </a>
           </div>

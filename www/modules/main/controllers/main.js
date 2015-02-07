@@ -1,5 +1,5 @@
 angular.module('rbtv.main')
-    .controller('AppController', ['$scope', '$ionicModal', '$timeout', 'loginTemplate', function($scope, $ionicModal, $timeout, loginTemplate) {
+    .controller('AppController', ['$scope', '$ionicModal', '$timeout', 'loginTemplate', '$state', function($scope, $ionicModal, $timeout, loginTemplate, $state) {
         // Form data for the login modal
         $scope.loginData = {};
 

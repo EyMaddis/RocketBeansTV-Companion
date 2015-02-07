@@ -1,6 +1,11 @@
 <ion-view view-title="RocketbeansTV Companion" class="redditbeans-post">
   <ion-content class="content-padding">
 
+      <ion-refresher
+              pulling-text="Herunterziehen zum Aktualisieren"
+              on-refresh="doRefresh()">
+      </ion-refresher>
+
       <div class="list card">
           <div ng-hide="post" class="item">
               Lade Inhalte...

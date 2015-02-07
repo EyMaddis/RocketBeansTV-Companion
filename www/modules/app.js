@@ -16,11 +16,12 @@ angular.module('rbtv', [
     'rbtv.shows',
     'rbtv.redditbeans',
     'restangular',
-    'rbtv.notification'
+    'rbtv.notification',
+    'angularUtils.directives.dirDisqus'
 ])
 
 
-.config(['RestangularProvider', 'ImgCacheProvider', '$urlRouterProvider', function(Restangular, ImgCacheProvider, $urlRouterProvider){
+.config(['RestangularProvider', 'ImgCacheProvider', '$urlRouterProvider', '$locationProvider', function(Restangular, ImgCacheProvider, $urlRouterProvider, $locationProvider){
     Restangular.setBaseUrl("http://192.168.178.25:3001/api/"); //TODO configurable for production
 
     // or more options at once
@@ -32,6 +33,8 @@ angular.module('rbtv', [
     ImgCacheProvider.manualInit = true;
 
     $urlRouterProvider.otherwise('/home');
+    $locationProvider
+        .hashPrefix('!');
 }])
 .run([
     '$ionicPlatform',
@@ -42,8 +45,9 @@ angular.module('rbtv', [
     'DSCacheFactory',
     'ImgCache',
     function($ionicPlatform, $rootScope, $ionicHistory, $http, Restangular, DSCacheFactory, ImgCache) {
-
         $ionicPlatform.ready(function() {
+
+
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
             // for form inputs)
             if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -81,4 +85,4 @@ angular.module('rbtv', [
             });
             ImgCache.$init(); // TODO does not work on devices
         });
-    }])
+    }]);

@@ -11,6 +11,7 @@ angular.module('rbtv.shows', ['restangular','ui.router', 'ionic']).config(['$sta
         })
         .state('rbtv.show', {
             url: "/show/:show",
+            cache: false, //disqus
             views: {
                 'menuContent': {
                     templateUrl: 'modules/shows/templates/show-detail.html',
