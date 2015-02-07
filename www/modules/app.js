@@ -5,8 +5,6 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 
-
-
 angular.module('rbtv', [
     'ionic',
     'angular-data.DSCacheFactory',
@@ -44,8 +42,8 @@ angular.module('rbtv', [
     'DSCacheFactory',
     'ImgCache',
     function($ionicPlatform, $rootScope, $ionicHistory, $http, Restangular, DSCacheFactory, ImgCache) {
+
         $ionicPlatform.ready(function() {
-            ImgCache.$init();
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
             // for form inputs)
             if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -81,5 +79,6 @@ angular.module('rbtv', [
                 timeout: 5000,
                 cache: DSCacheFactory.get('defaultCache')
             });
+            ImgCache.$init(); // TODO does not work on devices
         });
     }])
