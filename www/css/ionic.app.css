@@ -7041,11 +7041,12 @@ a.button {
   border-radius: 3px;
   margin: 3px; }
 .schedule .logo-col {
-  background-position: 50% 50%;
-  height: 70px;
-  max-width: 70px;
+  max-height: 70px;
+  width: 70px;
+  max-width: 70px; }
+.schedule img.logo-col {
   border-radius: 3px;
-  background-size: cover; }
+  padding: 0; }
 .schedule .icon-col {
   max-width: 40px; }
 .schedule .info-col {

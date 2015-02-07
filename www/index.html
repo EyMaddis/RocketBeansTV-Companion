@@ -24,6 +24,9 @@
     <script src="lib/angular-sanitize/angular-sanitize.js"></script>
     <script src="lib/showdown/compressed/Showdown.min.js"></script>
     <script src="lib/angular-markdown-directive/markdown.js"></script>
+    <script src="lib/angular-cache/dist/angular-cache.min.js"></script>
+    <script src="lib/imgcache.js/js/imgcache.js"></script>
+    <script src="lib/angular-imgcache/angular-imgcache.js"></script>
 
     <!-- use concat for deployment -->
     <!-- load notifications module -->
@@ -57,6 +60,8 @@
 
     <!-- load app -->
     <script src="modules/app.js"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
   </head>
 
   <body ng-app="rbtv">

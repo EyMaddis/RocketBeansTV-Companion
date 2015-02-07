@@ -9,6 +9,9 @@
     "moment": "~2.9.0",
     "angular-ui-router": "~0.2.13",
     "tinycolor": "~1.1.2",
-    "angular-markdown-directive": "~0.3.1"
+    "angular-markdown-directive": "~0.3.1",
+    "angular-cache": "~3.2.5",
+    "imgcache.js": "~0.7.6",
+    "angular-imgcache": "git://github.com/Maddis1337/angular-imgcache.js.git#~0.1.0"
   }
 }

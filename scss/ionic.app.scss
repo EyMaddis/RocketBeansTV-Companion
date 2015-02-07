@@ -66,11 +66,13 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     margin: 3px;
   }
   .logo-col {
-    background-position: 50% 50%;
-    height: 70px;
+    max-height: 70px;
+    width: 70px;
     max-width: 70px;
+  }
+  img.logo-col {
     border-radius: 3px;
-    background-size: cover;
+    padding: 0;
   }
   .icon-col {
     max-width: 40px;

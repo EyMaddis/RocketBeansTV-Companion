@@ -9,9 +9,10 @@
             <ion-item ng-repeat="item in list" ng-click="showDetail(item)" class="item item-icon-right {{item.class}}" >
 
               <div class="row">
-                <div class="col col-center logo-col" style="background-image: url({{imageBaseURL}}{{item.showImage}})">
-
-                </div>
+                <!--<div style="background-image: url({{imageBaseURL}}{{item.showImage}})">-->
+                <img ng-show="item.showImage" class="col col-center logo-col show-logo" img-cache ng-src="{{imageBaseURL}}{{item.showImage}}" />
+                <div class="col col-center logo-col" ng-hide="item.showImage"></div>
+                  <!--</div>-->
                 <div class="col info-col">
                   <p class="show">
                     {{item.show}}
