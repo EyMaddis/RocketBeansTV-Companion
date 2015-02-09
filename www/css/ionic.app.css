@@ -7136,7 +7136,7 @@ a.button {
   .redditbeans-post .comments .comment p {
     white-space: normal; }
 
-.disqus .info {
+.disqus .info p {
   white-space: normal !important;
   font-size: 0.8em;
   color: #999; }

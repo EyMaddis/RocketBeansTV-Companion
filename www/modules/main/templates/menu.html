@@ -21,19 +21,19 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item nav-clear menu-close href="/#!/home">
+        <ion-item nav-clear menu-close ng-click="$state.go('rbtv.home')">
           Übersicht
         </ion-item>
-        <ion-item nav-clear menu-close href="/#!/stream">
+        <ion-item nav-clear menu-close ng-click="$state.go('rbtv.stream')">
           Livestream
         </ion-item>
-        <ion-item nav-clear menu-close href="/#!/shows">
+        <ion-item nav-clear menu-close ng-click="$state.go('rbtv.shows')">
           Shows
         </ion-item>
-        <ion-item nav-clear menu-close href="/#!/schedule">
+        <ion-item nav-clear menu-close ng-click="$state.go('rbtv.schedule')">
           Sendeplan
         </ion-item>
-        <ion-item nav-clear menu-close href="/#!/redditbeans">
+        <ion-item nav-clear menu-close ng-click="$state.go('rbtv.redditbeans')">
           Redditbeans
         </ion-item>
         <!--<ion-item nav-clear menu-close ng-click="login()">-->

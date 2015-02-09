@@ -9,11 +9,11 @@
           <div class="col card">
                   <div class="item item-avatar">
                       <h2>Gerade im Stream</h2>
-                      <p>Spiel: '{{twitchStream.game}}' mit <strong>{{twitchStream.viewers}}</strong> Zuschauern!</p>
+                      <p>Spiel: '{{twitchStream.game}}' mit <strong>{{twitchStream.viewers | number}}</strong> Zuschauern!</p>
                   </div>
 
                   <div class="item item-image">
-                      <img ng-src="{{twitchStream.preview.large}}" style="max-width: 640px;">
+                      <img ng-src="{{twitchStream.preview.large}}{{imgCacheBreak}}" style="max-width: 640px;">
                   </div>
 
                   <a class="item item-icon-left assertive" ng-click="watchNow()">

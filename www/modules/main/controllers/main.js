@@ -3,6 +3,7 @@ angular.module('rbtv.main')
         // Form data for the login modal
         $scope.loginData = {};
 
+        $scope.$state = $state;
         // Create the login modal that we will use later
         $ionicModal.fromTemplateUrl(loginTemplate, {
             scope: $scope

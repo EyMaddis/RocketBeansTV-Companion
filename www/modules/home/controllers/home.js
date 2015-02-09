@@ -1,5 +1,6 @@
 angular.module('rbtv.home').controller('HomeController', ['$scope', '$state', '$http', 'DSCacheFactory', function($scope, $state, $http, DSCacheFactory) {
     var url = 'https://api.twitch.tv/kraken/streams/rocketbeansTV?callback=JSON_CALLBACK';
+    $scope.imgCacheBreak = '';
     var load = function(){
         $http.jsonp(url)
             .success(function(data){
@@ -19,6 +20,7 @@ angular.module('rbtv.home').controller('HomeController', ['$scope', '$state', '$
     $scope.doRefresh = function(){
         DSCacheFactory.get('defaultCache').remove(url);
         load();
+        $scope.imgCacheBreak = '?'+Date.now();
     };
 
 
