@@ -7018,6 +7018,12 @@ a.button {
 .main.view-container ion-content {
   background-color: #EEE; }
 
+.normal-wrapping {
+  white-space: normal !important; }
+
+.home p, .home a, .home h1, .home h2, .home h3, .home h4, .home h5 {
+  white-space: normal; }
+
 .twitch-wrapper div.scroll {
   height: 100%; }
 .twitch-wrapper .player {
@@ -7072,6 +7078,8 @@ a.button {
   font-size: 0.8em;
   color: #999; }
 
+.show-detail .playlist .item-thumbnail-left {
+  min-height: 80px !important; }
 .show-detail .container {
   max-width: 1023px;
   margin: auto;
@@ -7117,6 +7125,8 @@ a.button {
   color: #ccc;
   z-index: 0; }
 
+.redditbeans-post p, .redditbeans-post a, .redditbeans-post h1, .redditbeans-post h2, .redditbeans-post h3, .redditbeans-post h4, .redditbeans-post h5 {
+  white-space: normal; }
 .redditbeans-post .score {
   float: left;
   font-size: 3em;

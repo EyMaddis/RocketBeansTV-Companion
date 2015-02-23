@@ -17,12 +17,13 @@ angular.module('rbtv', [
     'rbtv.redditbeans',
     'restangular',
     'rbtv.notification',
-    'angularUtils.directives.dirDisqus'
+    'angularUtils.directives.dirDisqus',
+    'xml'
 ])
 
 
 .config(['RestangularProvider', 'ImgCacheProvider', '$urlRouterProvider', '$locationProvider', function(Restangular, ImgCacheProvider, $urlRouterProvider, $locationProvider){
-    Restangular.setBaseUrl("http://192.168.178.25:3001/api/"); //TODO configurable for production
+    Restangular.setBaseUrl("http://rocketbuddy.herokuapp.com/api/"); //TODO configurable for production
 
     // or more options at once
     ImgCacheProvider.setOptions({
@@ -69,7 +70,7 @@ angular.module('rbtv', [
                 }, 100);
             }
             // TODO
-            $rootScope.imageBaseURL = 'http://192.168.178.25:3001/images/show-logos/';
+            $rootScope.imageBaseURL = 'http://rocketbuddy.herokuapp.com/images/show-logos/';
 
             console.log(DSCacheFactory);
             DSCacheFactory('defaultCache', {

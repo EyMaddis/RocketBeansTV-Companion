@@ -29,7 +29,15 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .main.view-container ion-content {
   background-color: #EEE;
 }
+.normal-wrapping {
+  white-space: normal!important;
+}
 
+.home {
+  p, a, h1, h2, h3, h4, h5 {
+    white-space: normal;
+  }
+}
 .twitch-wrapper {
 
   div.scroll {
@@ -112,6 +120,15 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 .show-detail {
+
+
+  .playlist {
+    .item-thumbnail-left {
+      min-height: 80px!important;
+    }
+  }
+
+
   .container {
     max-width: $grid-responsive-lg-break;
     margin: auto;
@@ -188,6 +205,11 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   }
 }
 .redditbeans-post {
+
+  p, a, h1, h2, h3, h4, h5 {
+    white-space: normal;
+  }
+
   .score {
     float: left;
     font-size: 3em;

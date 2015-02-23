@@ -1,4 +1,5 @@
-angular.module('rbtv.shows', ['restangular','ui.router', 'ionic']).config(['$stateProvider', '$provide', function($stateProvider, $provide){
+angular.module('rbtv.shows', ['restangular','ui.router', 'ionic'])
+.config(['$stateProvider', '$provide', '$httpProvider', function($stateProvider, $provide, $httpProvider){
     $stateProvider
         .state('rbtv.shows', {
             url: "/shows",
@@ -19,6 +20,8 @@ angular.module('rbtv.shows', ['restangular','ui.router', 'ionic']).config(['$sta
                 }
             }
         });
+
+        $httpProvider.interceptors.push('xmlHttpInterceptor');   
     }])
     .value('imageBaseURL', 'http://192.168.178.25:3001/images/show-logos/') //TODO
     .factory('shows', ['Restangular', function(restangular){
@@ -56,4 +59,11 @@ angular.module('rbtv.shows', ['restangular','ui.router', 'ionic']).config(['$sta
             list: list,
             getByURL: getByURL
         }
-    }]);
+    }])
+    .filter('startFrom', function() {
+        return function(input, start) {
+            if(!input) return input;
+            start = +start; //parse to int
+            return input.slice(start);
+        }
+    });

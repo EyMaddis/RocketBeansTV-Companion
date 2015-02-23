@@ -1,14 +1,15 @@
 <ion-view view-title="RocketBuddy">
 
-  <ion-content class="content-padding">
+  <ion-content class="content-padding home">
       <ion-refresher
               pulling-text="Herunterziehen zum Aktualisieren"
               on-refresh="doRefresh()">
       </ion-refresher>
-      <div class="row responsive-md">
+      <div class="row responsive-md twitch-info">
           <div class="col card">
                   <div class="item item-avatar">
                       <h2>Gerade im Stream</h2>
+                      <p><strong>{{twitchStream.channel.status}}</strong></p>
                       <p>Spiel: '{{twitchStream.game}}' mit <strong>{{twitchStream.viewers | number}}</strong> Zuschauern!</p>
                   </div>
 

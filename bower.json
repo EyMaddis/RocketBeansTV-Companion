@@ -13,6 +13,8 @@
     "angular-cache": "~3.2.5",
     "imgcache.js": "~0.7.6",
     "angular-imgcache": "git://github.com/Maddis1337/angular-imgcache.js.git#~0.1.0",
-    "angular-utils-disqus": "~0.1.0"
+    "angular-utils-disqus": "~0.1.0",
+    "angular-xml": "~2.0.1",
+    "x2js": "~1.1.7"
   }
 }
