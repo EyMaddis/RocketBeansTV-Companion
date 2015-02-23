@@ -23,7 +23,7 @@ angular.module('rbtv', [
 
 
 .config(['RestangularProvider', 'ImgCacheProvider', '$urlRouterProvider', '$locationProvider', function(Restangular, ImgCacheProvider, $urlRouterProvider, $locationProvider){
-    Restangular.setBaseUrl("http://rocketbuddy.herokuapp.com/api/"); //TODO configurable for production
+    Restangular.setBaseUrl("https://rocketbuddy.de/api/"); //TODO configurable for production
 
     // or more options at once
     ImgCacheProvider.setOptions({
@@ -70,7 +70,7 @@ angular.module('rbtv', [
                 }, 100);
             }
             // TODO
-            $rootScope.imageBaseURL = 'http://rocketbuddy.herokuapp.com/images/show-logos/';
+            $rootScope.imageBaseURL = 'https://rocketbuddy.de/images/show-logos/';
 
             console.log(DSCacheFactory);
             DSCacheFactory('defaultCache', {
