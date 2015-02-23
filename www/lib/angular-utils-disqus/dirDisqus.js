@@ -44,7 +44,6 @@
                 if (typeof scope.disqus_identifier === 'undefined' || typeof scope.disqus_url === 'undefined') {
                     throw "Please ensure that the `disqus-identifier` and `disqus-url` attributes are both set.";
                 }
-
                 scope.$watch("readyToBind", function(isReady) {
 
                     // If the directive has been called without the 'ready-to-bind' attribute, we
@@ -60,6 +59,17 @@
                         $window.disqus_url = scope.disqus_url;
                         $window.disqus_category_id = scope.disqus_category_id;
                         $window.disqus_disable_mobile = scope.disqus_disable_mobile;
+                        //$window.disqus_config = function(){
+                        //    console.log('disqus config', this);
+                        //    this.callbacks.onReady.push(function(){
+                        //        console.log('disqus geladen!');
+                        //        var iframe = element.children().children()[0];
+                        //        console.log('disqus directive children', iframe);
+                        //        iframe.className += ' iframe-wrapper';
+                        //        var data = iframe.dataset;
+                        //            data.tapDisabled = true;
+                        //    });
+                        //};
 
                         // get the remote Disqus script and insert it into the DOM, but only if it not already loaded (as that will cause warnings)
                         if (!$window.DISQUS) {
