@@ -72,7 +72,6 @@ angular.module('rbtv', [
             // TODO
             $rootScope.imageBaseURL = 'https://rocketbuddy.de/images/show-logos/';
 
-            console.log(DSCacheFactory);
             DSCacheFactory('defaultCache', {
                 maxAge: 900000, // Items added to this cache expire after 15 minutes.
                 cacheFlushInterval: 6000000, // This cache will clear itself every hour.
