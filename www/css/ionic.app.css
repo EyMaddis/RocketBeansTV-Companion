@@ -7078,6 +7078,11 @@ a.button {
   font-size: 0.8em;
   color: #999; }
 
+.show-detail .embed {
+  text-align: center; }
+  .show-detail .embed iframe {
+    max-width: 100%;
+    max-height: 100%; }
 .show-detail .playlist .item-thumbnail-left {
   min-height: 80px !important; }
 .show-detail .container {

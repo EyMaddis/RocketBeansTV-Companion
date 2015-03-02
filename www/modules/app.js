@@ -5,6 +5,11 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 
+var getYoutubeID = function (url) {
+    var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return (url.match(p)) ? RegExp.$1 : false;
+};
+
 angular.module('rbtv', [
     'ionic',
     'angular-data.DSCacheFactory',
@@ -23,7 +28,7 @@ angular.module('rbtv', [
 
 
 .config(['RestangularProvider', 'ImgCacheProvider', '$urlRouterProvider', '$locationProvider', function(Restangular, ImgCacheProvider, $urlRouterProvider, $locationProvider){
-    Restangular.setBaseUrl("https://rocketbuddy.de/api/"); //TODO configurable for production
+    Restangular.setBaseUrl("http://localhost:5000/api/"); //TODO configurable for production
 
     // or more options at once
     ImgCacheProvider.setOptions({
@@ -70,7 +75,7 @@ angular.module('rbtv', [
                 }, 100);
             }
             // TODO
-            $rootScope.imageBaseURL = 'https://rocketbuddy.de/images/show-logos/';
+            $rootScope.imageBaseURL = 'http://localhost:5000/images/show-logos/';
 
             DSCacheFactory('defaultCache', {
                 maxAge: 900000, // Items added to this cache expire after 15 minutes.

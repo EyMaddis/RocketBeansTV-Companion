@@ -7,7 +7,10 @@ angular.module('rbtv.shows')
         '$window',
         '$http',
         '$q',
-        function($scope, shows, $stateParams, $ionicPopup, $window, $http, $q) {
+        '$sce',
+        '$ionicScrollDelegate',
+        '$timeout',
+        function($scope, shows, $stateParams, $ionicPopup, $window, $http, $q, $sce, $ionicScrollDelegate, $timeout) {
 
         $scope.loadDisqus = false;
         $scope.loadingPlaylists = true;
@@ -30,6 +33,7 @@ angular.module('rbtv.shows')
             if(!show.playlistIds) return;
             console.log('loading videos');
             show.playlistIds.forEach(function(playlistId){
+                console.log(playlistURL+playlistId);
                 playlistsPromises.push($http.get(playlistURL+playlistId));
             });
             
@@ -67,10 +71,25 @@ angular.module('rbtv.shows')
                 template: err.message
             });
         });
+        $scope.Math = Math;
 
         $scope.setPlaylist = function(playlist){
             $scope.playlist = playlist;
-        }
+        };
+
+        $scope.playVideo = function(playlist, entry){
+            console.log('INDEX', entry.position);
+            var index = parseInt(entry.position.toString())-1;
+            // todo get video 
+            // 'embed/'+videoId+'?listType=playlist&list=PL'+playlistId+'&theme=light'
+            var playlistId = playlist.playlistId;
+            $scope.currentVideo = $sce.trustAsResourceUrl('https://www.youtube.com/embed/videoseries?list='+playlistId+'&index='+index);
+            
+            $timeout(function(){
+                $ionicScrollDelegate.$getByHandle('videoPlayer').scrollTop(true);
+
+            }, 1000);
+        };
 
         
     }]);

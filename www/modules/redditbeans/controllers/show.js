@@ -9,11 +9,6 @@ angular.module('rbtv.redditbeans')
         function($http, $stateParams, $scope, $sce, $ionicPopup, DSCacheFactory){
             var url = 'https://www.reddit.com/r/rocketbeans/comments/'+$stateParams.post+'.json?jsonp=JSON_CALLBACK';
 
-            var getYoutubeID = function (url) {
-                var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
-                return (url.match(p)) ? RegExp.$1 : false;
-            };
-
             var load = function(){
                 $http.jsonp(url)
                     .error(function(err){

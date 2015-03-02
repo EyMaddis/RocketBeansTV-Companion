@@ -30,19 +30,28 @@
         </div>
 
         <div class="item item-divider">
-          Neueste Videos
+          Videos
         </div>
+
+        <div ng-show="currentVideo">
+          <ion-content delegate-handle="videoPlayer">
+              <p class="embed">
+                  <iframe width="420" height="315" ng-src="{{currentVideo}}" frameborder="0" allowfullscreen autoplay></iframe>
+              </p>
+          </ion-content>
+        </div>
+
         <div ng-show="loadingPlaylists" class="item">
           <p>
             <h3>Lade Videos...</h3>
           </p>
         </div>
-        <div ng-show="!loadingPlaylists && playlists.length < 1" class="item">
+        <div ng-show="!loadingPlaylists && (!playlists || playlists.length < 1)" class="item">
           <p>
             <h3>Kein Videos gefunden</h3>
           </p>
         </div>
-        <div ng-hide="loadingPlaylists || playlists.length < 1" class="list">
+        <div ng-hide="loadingPlaylists || !playlists || (playlists.length > 0 && playlists.length < 2)" class="list">
           <h4 class="item">Es stehen mehrere Playlists zur Auswahl</h4>
           <a class="item card" ng-repeat="pl in playlists" ng-click="setPlaylist(pl)">
             {{pl.title.__text}}
@@ -50,13 +59,16 @@
         </div>
         <span ng-show="playlist"> 
           <div ng-repeat="entry in playlist.entry | startFrom:currentPage*pageSize | limitTo:pageSize" class="list card playlist">
-            <a class="item item-thumbnail-left">
+            <a class="item item-thumbnail-left" ng-click="playVideo(playlist, entry)">
               <img ng-src="{{entry.group.thumbnail[1]._url}}" />
               <h2 class="playlist-item normal-wrapping">
                {{entry.title.__text}}
               </h2>
               <p class="normal-wrapping">
-               {{entry.statistics._viewCount | number}} Aufrufe
+               
+                {{Math.round(entry.group.duration._seconds / 60)}} Minuten | 
+                {{entry.statistics._viewCount | number}} Aufrufe | 
+                {{entry.published | date}}
               </p>
             </a>
           </div>
