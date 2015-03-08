@@ -33,13 +33,6 @@
           Videos
         </div>
 
-        <div ng-show="currentVideo">
-          <ion-content delegate-handle="videoPlayer">
-              <p class="embed">
-                  <iframe width="420" height="315" ng-src="{{currentVideo}}" frameborder="0" allowfullscreen autoplay></iframe>
-              </p>
-          </ion-content>
-        </div>
 
         <div ng-show="loadingPlaylists" class="item">
           <p>
@@ -56,6 +49,11 @@
           <a class="item card" ng-repeat="pl in playlists" ng-click="setPlaylist(pl)">
             {{pl.title.__text}}
           </a>
+        </div>
+        <div ng-show="currentVideo" style="height: 315px" delegate-handle="{{handle}}">
+            <p class="embed">
+                <iframe width="420" height="315" ng-src="{{currentVideo}}" frameborder="0" allowfullscreen></iframe>
+            </p>
         </div>
         <span ng-show="playlist"> 
           <div ng-repeat="entry in playlist.entry | startFrom:currentPage*pageSize | limitTo:pageSize" class="list card playlist">

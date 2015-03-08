@@ -31,4 +31,15 @@ angular.module('rbtv.main')
                 $scope.closeLogin();
             }, 1000);
         };
+
+        $scope.menuItems = [
+            {state: 'rbtv.home', label: 'Jetzt gerade'},
+            {state: 'rbtv.stream', label: 'Livestream'},
+            {state: 'rbtv.shows', label: 'Shows'},
+            {state: 'rbtv.schedule', label: 'Sendeplan'},
+            {state: 'rbtv.redditbeans', label: 'Redditbeans'},
+            {state: 'rbtv.support', label: 'Support'},
+            {state: 'rbtv.impressum', label: 'App-Info'}
+        ];
+
     }]);

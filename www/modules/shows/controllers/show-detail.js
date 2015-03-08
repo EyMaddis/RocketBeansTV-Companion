@@ -83,12 +83,15 @@ angular.module('rbtv.shows')
             // todo get video 
             // 'embed/'+videoId+'?listType=playlist&list=PL'+playlistId+'&theme=light'
             var playlistId = playlist.playlistId;
-            $scope.currentVideo = $sce.trustAsResourceUrl('https://www.youtube.com/embed/videoseries?list='+playlistId+'&index='+index);
+            $scope.currentVideo = $sce.trustAsResourceUrl('https://www.youtube.com/embed/videoseries?list='
+                +playlistId+'&index='+index+'&autoplay=1');
             
+            var handle = $ionicScrollDelegate.$getByHandle($scope.handle);
+            $scope.handle = 'videoPlayer'+Math.random();
             $timeout(function(){
-                $ionicScrollDelegate.$getByHandle('videoPlayer').scrollTop(true);
-
-            }, 1000);
+                console.log('delegate', $ionicScrollDelegate);
+                handle.scrollTop(true);
+            }, 100);
         };
 
         
