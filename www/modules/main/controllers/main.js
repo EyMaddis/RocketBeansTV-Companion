@@ -33,13 +33,13 @@ angular.module('rbtv.main')
         };
 
         $scope.menuItems = [
-            {state: 'rbtv.home', label: 'Jetzt gerade'},
-            {state: 'rbtv.stream', label: 'Livestream'},
-            {state: 'rbtv.shows', label: 'Shows'},
-            {state: 'rbtv.schedule', label: 'Sendeplan'},
-            {state: 'rbtv.redditbeans', label: 'Redditbeans'},
-            {state: 'rbtv.support', label: 'Support'},
-            {state: 'rbtv.impressum', label: 'App-Info'}
+            {state: 'rbtv.home', label: 'Jetzt gerade', icon: 'home'},
+            {state: 'rbtv.stream', label: 'Livestream', icon: 'social-twitch'}, //TODO Update ionic icons
+            {state: 'rbtv.shows', label: 'Shows', icon: 'film-marker'},
+            {state: 'rbtv.schedule', label: 'Sendeplan', icon: 'calendar'},
+            {state: 'rbtv.redditbeans', label: 'Redditbeans', icon: 'social-reddit'},
+            {state: 'rbtv.support', label: 'Support', icon: 'heart'},
+            {state: 'rbtv.impressum', label: 'App-Info', icon: 'information'}
         ];
 
     }]);

@@ -21,8 +21,9 @@
     </ion-header-bar>
     <ion-content class="dark-bg">
       <ion-list>
-        <ion-item ng-repeat="item in menuItems" nav-clear menu-close ng-click="$state.go(item.state)" class="item-dark">
+        <ion-item ng-repeat="item in menuItems" nav-clear menu-close ng-click="$state.go(item.state)" class="item-dark item-icon-right">
           {{item.label}}
+          <i class="icon ion-{{item.icon}}" ng-show="item.icon"> </i>
         </ion-item>
         
         <!--<ion-item nav-clear menu-close ng-click="login()">-->
