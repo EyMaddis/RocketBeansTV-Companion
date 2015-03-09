@@ -16,6 +16,7 @@ angular.module('rbtv', [
     'ImgCache',
     'rbtv.main',
     'rbtv.home',
+    'rbtv.impressum',
     'rbtv.schedule',
     'rbtv.stream',
     'rbtv.shows',
