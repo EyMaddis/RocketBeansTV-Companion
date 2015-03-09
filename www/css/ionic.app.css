@@ -7113,6 +7113,9 @@ a.button {
   color: white !important; }
 .show-detail .dark p, .show-detail .dark h1 {
   color: black !important; }
+.show-detail .hashtag a {
+  color: #000;
+  text-decoration: none; }
 
 .redditbeans .post.item-icon-right {
   padding-right: 64px; }

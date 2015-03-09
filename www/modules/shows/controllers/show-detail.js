@@ -27,14 +27,16 @@ angular.module('rbtv.shows')
             $scope.disqus_shortname = 'rocketbuddy';
             $scope.disqus_title = show.title;
 
-            var playlistURL = 'https://gdata.youtube.com/feeds/api/playlists/';
+            //var playlistURL = 'https://gdata.youtube.com/feeds/api/playlists/'; TODO
+            var playlistURL = 'http://localhost:5000/dev/';
             var playlistsPromises = [];
             console.log(show);
             if(!show.playlistIds) return;
             console.log('loading videos');
             show.playlistIds.forEach(function(playlistId){
                 console.log(playlistURL+playlistId);
-                playlistsPromises.push($http.get(playlistURL+playlistId));
+                // playlistsPromises.push($http.get(playlistURL+playlistId));
+                playlistsPromises.push($http.get(playlistURL+playlistId+'.xml'));//TODO ICE
             });
             
             $q.all(playlistsPromises)

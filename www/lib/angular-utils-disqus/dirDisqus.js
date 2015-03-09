@@ -36,7 +36,7 @@
                 disqus_disable_mobile: '@disqusDisableMobile',
                 readyToBind: "@"
             },
-            template: '<div id="disqus_thread"></div><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>',
+            template: '<div id="disqus_thread"></div><a href="http://disqus.com" class="dsq-brlink"><span class="logo-disqus">Disqus</span> unterstützte Kommentare werden geladen.</a>',
             link: function(scope) {
 
                 // ensure that the disqus_identifier and disqus_url are both set, otherwise we will run in to identifier conflicts when using URLs with "#" in them

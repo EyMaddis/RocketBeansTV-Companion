@@ -19,7 +19,12 @@
             <div class="col banner-col col-offset-10 col-33"></div>
             <div class="col">
               <p class="description">
+              <h3>Beschreibung</h3>
                {{show.description.toString()}}
+              </p>
+              <p class="hashtag" ng-show="show.hashtag">
+                <i class="icon ion-pricetag"> </i> 
+                <a href="https://twitter.com/search/?q={{show.hashtag}}">{{show.hashtag}}</a>
               </p>
             </div>
           </div>
@@ -46,9 +51,11 @@
         </div>
         <div ng-hide="loadingPlaylists || !playlists || (playlists.length > 0 && playlists.length < 2)" class="list">
           <h4 class="item">Es stehen mehrere Playlists zur Auswahl</h4>
-          <a class="item card" ng-repeat="pl in playlists" ng-click="setPlaylist(pl)">
-            {{pl.title.__text}}
-          </a>
+          <div style="padding: 5px;">
+            <button class="button button-outline button-positive" ng-repeat="pl in playlists" ng-click="setPlaylist(pl)" style="margin-right: 15px; margin-top: 5px; white-space: normal">
+              {{pl.title.__text}}
+            </button>
+          </div>
         </div>
         <div ng-show="currentVideo" style="height: 315px" delegate-handle="{{handle}}">
             <p class="embed">
